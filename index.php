@@ -1,6 +1,7 @@
 <?php
 require 'db.php';
 $posts = $pdo->query("SELECT * FROM posts ORDER BY created_at DESC")->fetchAll();
+include 'header.php';
 ?>
 <h1>Mini Blog</h1>
 <a href="create.php">New Post</a>
@@ -13,3 +14,5 @@ $posts = $pdo->query("SELECT * FROM posts ORDER BY created_at DESC")->fetchAll()
         </li>
     <?php endforeach; ?>
 </ul>
+
+<?php include 'footer.php'; ?>
