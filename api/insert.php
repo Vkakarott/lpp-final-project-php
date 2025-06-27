@@ -21,7 +21,7 @@ if (!preg_match('/^[\p{L}\p{N}\s]+$/u', $title)) {
 $content = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $content);
 
 try {
-    $db = new PDO('sqlite:data/blog.db');
+    $db = new PDO('sqlite:' . dirname(__DIR__) . '/data/blog.db');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $db->prepare("INSERT INTO posts (title, content, created_at) VALUES (?, ?, datetime('now'))");
