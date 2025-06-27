@@ -108,4 +108,8 @@ Foi desenvolvido como projeto final da disciplina "Linguagens e Paradigmas da Pr
 * Títulos aceitam apenas letras, números e espaços (validação com expressões regulares).
 * O conteúdo do post é limpo para remover tags `<script>`, prevenindo ataques XSS básicos.
 
+
+##Conclusão
+* O projeto do mini blog explorou diversos aspectos importantes do PHP, como a manipulação de banco de dados SQLite através do PDO, o uso de expressões regulares para validação de entrada, e técnicas básicas de segurança, como a sanitização de dados para evitar scripts maliciosos. Além disso, a implementação de um endpoint de API demonstrou como o PHP pode ser utilizado tanto para aplicações web clássicas quanto para serviços REST simples.
+
 ---
