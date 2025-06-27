@@ -12,5 +12,7 @@ if (!preg_match('/^[\p{L}\p{N}\s]+$/u', $title)) {
 $db = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', '');
 $stmt = $db->prepare("INSERT INTO posts (title, content, created_at) VALUES (?, ?, NOW())");
 $stmt->execute([$title, $content]);
+$file = new SplFileObject('backup_posts.txt', 'a');
+$file->fwrite("Título: $title\nConteúdo: $content\n---\n");
 
 echo "Post inserido com sucesso!\n";
